@@ -1,0 +1,6 @@
+# Define your PostgreSQL version to use
+FROM postgres
+
+
+# Copy the SQL scripts to docker postgres db directory
+COPY ./sql_scripts/ /docker-entrypoint-initdb.d/

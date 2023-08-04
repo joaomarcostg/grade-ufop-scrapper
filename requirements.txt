@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.2
+numpy==1.25.1
+pandas==2.0.3
+Requests==2.31.0
+selenium==4.11.2
+SQLAlchemy==2.0.19
+tabula_py==2.7.0
+tqdm==4.65.0
