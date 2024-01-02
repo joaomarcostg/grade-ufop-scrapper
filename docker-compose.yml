@@ -9,6 +9,7 @@ services:
 
   db:
     image: postgres
+    # platform: linux/arm64 uncomment this line to run in macOS
     restart: always
     environment:
       POSTGRES_DB: gradeufop_db
