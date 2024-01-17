@@ -207,3 +207,107 @@ e49291b3-687e-445a-aded-6fe42d30e698,quimica,Química,2023-11-06 17:10:50.296043
 9b0048fa-280f-474a-8644-1b8a4f594a87,servico-social,Serviço Social,2023-11-06 17:10:50.296043
 595c5135-3c18-44a9-b1da-aa6bea97a102,sistemas-de-informacao,Sistemas de Informação,2023-11-06 17:10:50.296043
 7594c707-9242-4cf5-b4f5-5e0be0d86541,turismo,Turismo,2023-11-06 17:10:50.296043
+245992a7-1fe0-4fd2-8f12-8bb62ae75e19,administracao,Administração,2024-01-02 21:27:12.969070
+6ec83db2-dce5-45f6-b130-3094369d0675,administracao-publica,Administração Pública,2024-01-02 21:27:12.969070
+d38ba752-65c0-4068-9e33-f7c9dda7535d,administracao-publica-ead,Administração Pública (EaD),2024-01-02 21:27:12.969070
+3c649137-7dd5-448c-9401-e87d4c68342c,arquitetura-e-urbanismo,Arquitetura e Urbanismo,2024-01-02 21:27:12.969070
+6ec4130f-457e-4c14-add9-1c865fcceef1,artes-cenicas-bacharelado,Artes Cênicas (Bacharelado),2024-01-02 21:27:12.969070
+2f971b75-0dc3-4adf-9db3-40560b28c2bb,artes-cenicas-licenciatura,Artes Cênicas (Licenciatura),2024-01-02 21:27:12.969070
+9268928a-3c42-4b87-ad47-498f6cc58a9d,ciencia-da-computacao,Ciência da Computação,2024-01-02 21:27:12.969070
+91fb5f74-3047-4b2f-a185-82596d6a28fa,ciencia-e-tecnologia-de-alimentos,Ciência e Tecnologia de Alimentos,2024-01-02 21:27:12.969070
+be94a4c5-8993-4367-ae38-308966b3df92,ciencias-biologicas-bacharelado,Ciências Biológicas (Bacharelado),2024-01-02 21:27:12.969070
+1d5cc6be-76ac-4f28-b64d-a09f2728ef80,ciencias-biologicas-licenciatura,Ciências Biológicas (Licenciatura),2024-01-02 21:27:12.969070
+b0035f94-6cc3-4de3-a30a-ca6455935a68,ciencias-economicas,Ciências Econômicas,2024-01-02 21:27:12.969070
+cd454df6-2e96-4552-9611-21eb919c5b5f,direito,Direito,2024-01-02 21:27:12.969070
+d0b41fbe-6bfb-4c4e-85c0-0d6af4594520,educacao-fisica-bacharelado,Educação Física (Bacharelado),2024-01-02 21:27:12.969070
+9ff1dbff-70cc-45be-8232-fe74ecf3e542,educacao-fisica-licenciatura,Educação Física (Licenciatura),2024-01-02 21:27:12.969070
+b9794c32-cfd6-447f-9ba1-ef0ba36d377c,engenharia-ambiental,Engenharia Ambiental,2024-01-02 21:27:12.969070
+601d39cd-a8cb-470f-932e-6fe4c3999ddc,engenharia-civil,Engenharia Civil,2024-01-02 21:27:12.969070
+2bf96bd8-3cdd-4df9-8fe3-f2dd66ca3fb1,engenharia-de-computacao,Engenharia de Computação,2024-01-02 21:27:12.969070
+8e4a8bc7-b5cd-4a1b-aa1c-2496dffd50e6,engenharia-de-controle-e-automacao,Engenharia de Controle e Automação,2024-01-02 21:27:12.969070
+e3ca5025-4195-447a-beb9-a1e44eaf6bcd,engenharia-de-minas,Engenharia de Minas,2024-01-02 21:27:12.969070
+c8ddbf68-3f8e-4b26-8bae-a80121509056,engenharia-de-producao-jm,Engenharia de Produção (JM),2024-01-02 21:27:12.969070
+392670e4-24a2-4ba7-97af-2fa6119c933f,engenharia-de-producao-op,Engenharia de Produção (OP),2024-01-02 21:27:12.969070
+60cb0e4b-9923-49ac-a2f5-234128a4130d,engenharia-eletrica,Engenharia Elétrica,2024-01-02 21:27:12.969070
+54ed23a5-002c-4f00-826b-0518492416a8,engenharia-geologica,Engenharia Geológica,2024-01-02 21:27:12.969070
+d490a542-0a4a-46be-b1bf-d8bc4aa6968e,engenharia-mecanica,Engenharia Mecânica,2024-01-02 21:27:12.969070
+15508d33-baed-4b1a-976b-1be4e848912a,engenharia-metalurgica,Engenharia Metalúrgica,2024-01-02 21:27:12.969070
+a480947d-8526-46be-8d8e-383f15a83ca0,engenharia-urbana,Engenharia Urbana,2024-01-02 21:27:12.969070
+a4ce4543-19a1-4e98-a4ee-e98cb5379291,estatistica,Estatística,2024-01-02 21:27:12.969070
+bad3bf35-d4ec-41f8-92d6-3dfcecbcd0b8,farmacia,Farmácia,2024-01-02 21:27:12.969070
+0cf7333f-f2ec-460c-8291-d35e57fb73b8,filosofia-bacharelado,Filosofia (Bacharelado),2024-01-02 21:27:12.969070
+cf47c5fc-a158-428d-a5cf-b5ba8d761345,filosofia-licenciatura,Filosofia (Licenciatura),2024-01-02 21:27:12.969070
+af8b0a4c-136f-486f-8aa1-4044f8007720,fisica-bacharelado,Física (Bacharelado),2024-01-02 21:27:12.969070
+12eec80c-0e22-492b-ac68-afc3960ff44c,fisica-licenciatura,Física (Licenciatura),2024-01-02 21:27:12.969070
+b0a597b0-a3b5-4d24-8ec0-b3ba32945da1,geografia-ead,Geografia (EaD),2024-01-02 21:27:12.969070
+eda08a20-7252-4f73-85d2-beda0837d62f,historia-bacharelado,História (Bacharelado),2024-01-02 21:27:12.969070
+98e38d3d-23e8-4326-b0e1-c2dcae65e340,historia-licenciatura,História (Licenciatura),2024-01-02 21:27:12.969070
+70168b1b-eb11-4ab3-b9da-9167e5063920,jornalismo,Jornalismo,2024-01-02 21:27:12.969070
+c25c95ff-5037-4653-9ffc-18383be222e9,letras-bacharelado,Letras (Bacharelado),2024-01-02 21:27:12.969070
+32c8f85d-2494-4832-aae4-eed946314f28,letras-licenciatura,Letras (Licenciatura),2024-01-02 21:27:12.969070
+7e1e848e-93f1-44d0-bf47-077cfabecfe9,matematica-bacharelado,Matemática (Bacharelado),2024-01-02 21:27:12.969070
+52295dad-77c3-4bb8-9efd-98c8094974c4,matematica-ead,Matemática (EaD),2024-01-02 21:27:12.969070
+2ee2b865-9ea9-46e8-8683-ae33e5eb9591,matematica-licenciatura,Matemática (Licenciatura),2024-01-02 21:27:12.969070
+30fdf05c-635c-4b1f-943f-24d80e95bb41,medicina,Medicina,2024-01-02 21:27:12.969070
+e88cc47e-fa98-4996-8931-b82b786b0af8,museologia,Museologia,2024-01-02 21:27:12.969070
+f98151e1-1c8d-4bcd-a057-c47a91a36f6d,musica,Música,2024-01-02 21:27:12.969070
+e47e47ff-340b-4634-a529-ddc9e70af012,nutricao,Nutrição,2024-01-02 21:27:12.969070
+1a76c5c0-aad0-420e-88e4-72bcc933c904,pedagogia,Pedagogia,2024-01-02 21:27:12.969070
+4ed3c41f-5535-4da6-81b3-213298180576,pedagogia-ead,Pedagogia (EaD),2024-01-02 21:27:12.969070
+c75a810d-b00e-4b6e-8464-d37fb0f3aad6,quimica,Química,2024-01-02 21:27:12.969070
+cab82050-ee36-42ca-852a-65e835701e88,quimica-industrial,Química Industrial,2024-01-02 21:27:12.969070
+f3e86381-a879-4cec-a8fe-af2ac43b7efc,servico-social,Serviço Social,2024-01-02 21:27:12.969070
+ca65b96f-c86c-4015-9cab-dd70ebac878b,sistemas-de-informacao,Sistemas de Informação,2024-01-02 21:27:12.969070
+c667a393-84c9-4fab-ad77-c584f7265176,turismo,Turismo,2024-01-02 21:27:12.969070
+1264412c-b9fe-4295-ad5b-c6c377f98a67,administracao,Administração,2024-01-03 19:04:46.398160
+238734a4-4eab-4585-93eb-9411a4fb42a9,administracao-publica,Administração Pública,2024-01-03 19:04:46.398160
+2d4bdc71-4bcf-4cd1-974e-47156b5b9cce,administracao-publica-ead,Administração Pública (EaD),2024-01-03 19:04:46.398160
+6ae6fcd7-85ae-4d50-9d61-5e827f6e19b9,arquitetura-e-urbanismo,Arquitetura e Urbanismo,2024-01-03 19:04:46.398160
+161941c8-7a8a-42f8-b5cb-75e13a4b0d18,artes-cenicas-bacharelado,Artes Cênicas (Bacharelado),2024-01-03 19:04:46.398160
+454a1e8a-9403-4f2f-bd27-1bd6287e7747,artes-cenicas-licenciatura,Artes Cênicas (Licenciatura),2024-01-03 19:04:46.398160
+f7e14b15-0876-4429-8741-b036b90c5f53,ciencia-da-computacao,Ciência da Computação,2024-01-03 19:04:46.398160
+ad89b605-0d88-4f59-8dda-80479fd9e4d0,ciencia-e-tecnologia-de-alimentos,Ciência e Tecnologia de Alimentos,2024-01-03 19:04:46.398160
+de5f9d9b-feac-4ba3-bca9-546aafc43549,ciencias-biologicas-bacharelado,Ciências Biológicas (Bacharelado),2024-01-03 19:04:46.398160
+d9705291-615e-460b-9cc7-a77086579d21,ciencias-biologicas-licenciatura,Ciências Biológicas (Licenciatura),2024-01-03 19:04:46.398160
+eaa15615-15ee-4969-a1c3-dc40c7e4dd15,ciencias-economicas,Ciências Econômicas,2024-01-03 19:04:46.398160
+05f4d49f-67b1-4357-a1d1-7bd94392b6e3,direito,Direito,2024-01-03 19:04:46.398160
+769360e9-a684-499f-b9bd-98a5b4fd905b,educacao-fisica-bacharelado,Educação Física (Bacharelado),2024-01-03 19:04:46.398160
+4ac260a1-6181-4670-9ac3-69fcab0ec9d5,educacao-fisica-licenciatura,Educação Física (Licenciatura),2024-01-03 19:04:46.398160
+532ccb92-94df-4e04-9ee8-e5eb8e4f9bb9,engenharia-ambiental,Engenharia Ambiental,2024-01-03 19:04:46.398160
+de6f3216-0ac4-44b5-ae3b-c69445f12ddb,engenharia-civil,Engenharia Civil,2024-01-03 19:04:46.398160
+091d9d70-11a2-447a-8fd6-7074734480ea,engenharia-de-computacao,Engenharia de Computação,2024-01-03 19:04:46.398160
+6234dbe9-cc51-4663-a45b-c5f6b5a4453b,engenharia-de-controle-e-automacao,Engenharia de Controle e Automação,2024-01-03 19:04:46.398160
+d0229b29-b58c-4c8e-8c65-c5bcd15e5802,engenharia-de-minas,Engenharia de Minas,2024-01-03 19:04:46.398160
+f7dd3303-64b2-4b45-9816-8f7733299fd3,engenharia-de-producao-jm,Engenharia de Produção (JM),2024-01-03 19:04:46.398160
+141eee33-8440-4e1b-96d3-d34ceee79b7e,engenharia-de-producao-op,Engenharia de Produção (OP),2024-01-03 19:04:46.398160
+2a3b24a3-bc75-4233-8315-f0b7c93939a5,engenharia-eletrica,Engenharia Elétrica,2024-01-03 19:04:46.398160
+667b51b8-e032-49d2-aac1-7668f0803002,engenharia-geologica,Engenharia Geológica,2024-01-03 19:04:46.398160
+d125541c-c22d-4cc7-9da2-7dc42a1e290f,engenharia-mecanica,Engenharia Mecânica,2024-01-03 19:04:46.398160
+3c1eb154-5304-43db-95b1-f88e601d6b3d,engenharia-metalurgica,Engenharia Metalúrgica,2024-01-03 19:04:46.398160
+6e0a1d63-ecc8-4128-ad81-48f2f7e1ccfe,engenharia-urbana,Engenharia Urbana,2024-01-03 19:04:46.398160
+a8966b70-0e4c-4917-ae3f-6cb2df3dc7f5,estatistica,Estatística,2024-01-03 19:04:46.398160
+a0046677-adb2-46a6-8c86-f86463b75dd4,farmacia,Farmácia,2024-01-03 19:04:46.398160
+8f510d7c-3dad-42c5-a838-a6facc4f222e,filosofia-bacharelado,Filosofia (Bacharelado),2024-01-03 19:04:46.398160
+6dd9d01c-5033-4fe2-ae3b-12ecb5b81ab1,filosofia-licenciatura,Filosofia (Licenciatura),2024-01-03 19:04:46.398160
+1204bdaa-481a-4bbb-84d7-b9d0a51dab43,fisica-bacharelado,Física (Bacharelado),2024-01-03 19:04:46.398160
+9b601dc9-e91c-4529-a1d2-645bd1bcb96f,fisica-licenciatura,Física (Licenciatura),2024-01-03 19:04:46.398160
+ffd343e0-8b1d-4576-836c-df66ce1bf7a0,geografia-ead,Geografia (EaD),2024-01-03 19:04:46.398160
+5dd7109a-e5f9-4f8c-9ded-7959d267cc49,historia-bacharelado,História (Bacharelado),2024-01-03 19:04:46.398160
+de3420c7-6bcd-48e7-9bcd-4cc058748f1d,historia-licenciatura,História (Licenciatura),2024-01-03 19:04:46.398160
+fe204675-11cb-4181-ba43-fdf33657a07c,jornalismo,Jornalismo,2024-01-03 19:04:46.398160
+ee79f5fa-b962-479b-9638-eb485414a64f,letras-bacharelado,Letras (Bacharelado),2024-01-03 19:04:46.398160
+ac7568a9-03c5-47d7-af62-947fe1457587,letras-licenciatura,Letras (Licenciatura),2024-01-03 19:04:46.398160
+d9c228a2-d963-4ac6-9c5f-398043f46713,matematica-bacharelado,Matemática (Bacharelado),2024-01-03 19:04:46.398160
+6a4b13ff-c0ba-4177-a0a7-5d492bb87e42,matematica-ead,Matemática (EaD),2024-01-03 19:04:46.398160
+86577643-3d15-45a9-b1f9-fe3150441600,matematica-licenciatura,Matemática (Licenciatura),2024-01-03 19:04:46.398160
+419b966b-ceea-4ade-897a-4f93e5869283,medicina,Medicina,2024-01-03 19:04:46.398160
+7c17bf13-c51d-4435-8278-a7c3d5b2a138,museologia,Museologia,2024-01-03 19:04:46.398160
+3e7599f4-694e-4295-ae1f-e5bcf6e05297,musica,Música,2024-01-03 19:04:46.398160
+5fcd75d1-f3ac-44a2-9496-60cf59103544,nutricao,Nutrição,2024-01-03 19:04:46.398160
+30495491-7032-4766-b100-bd0f6afc15c4,pedagogia,Pedagogia,2024-01-03 19:04:46.398160
+d14000a5-61e7-4442-b5ca-e330a3a70545,pedagogia-ead,Pedagogia (EaD),2024-01-03 19:04:46.398160
+a408df65-c08f-4800-a160-fac0a49b4f32,quimica,Química,2024-01-03 19:04:46.398160
+2d4be43a-5f79-4747-b8b2-a8b0e8d03e90,quimica-industrial,Química Industrial,2024-01-03 19:04:46.398160
+079efa86-b1c0-4f4e-994f-427580d1ad15,servico-social,Serviço Social,2024-01-03 19:04:46.398160
+5e1ce672-91b3-4d9e-ae09-2ab1f38bdf7e,sistemas-de-informacao,Sistemas de Informação,2024-01-03 19:04:46.398160
+3bb72efa-37e1-4ff8-8be2-2cbfcfdba0d9,turismo,Turismo,2024-01-03 19:04:46.398160
