@@ -1,0 +1,5 @@
+TODO: Loop over disciplines in the time table, differ disciplines by code and name, if they have same code and name creat different classes
+In case they only have the name in common but are being extracted from the same department we can create a  equivalency group and add both of them
+While looping over course table (from pdf), check if the discipline code already exists, as we are doing but in case they don't check if there is disciplines with the same name and department, to check if the department matches we can do a check with the prefix, like: discpline codes always start with some letters than the numbers, like: CEA007, if the prefix are the same we can consider as same department, the discipline code follow this pattern
+code_pattern = r"[A-Z]{3}\d{3}"
+In case the disciplines are considered the same, we can add them to the same equivalency group.
