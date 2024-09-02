@@ -2,64 +2,81 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- CreateTable
-CREATE TABLE "course" (
+CREATE TABLE IF NOT EXISTS "course" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
-    "code" VARCHAR,
-    "name" VARCHAR,
+    "code" TEXT,
+    "name" TEXT,
     "created_at" TIMESTAMP(6),
 
     CONSTRAINT "course_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
-CREATE TABLE "department" (
+CREATE TABLE IF NOT EXISTS "department" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
-    "code" VARCHAR,
-    "name" VARCHAR,
+    "code" TEXT,
+    "name" TEXT,
     "created_at" TIMESTAMP(6),
 
     CONSTRAINT "department_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
-CREATE TABLE "discipline" (
+CREATE TABLE IF NOT EXISTS "equivalency_group" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
-    "code" VARCHAR,
-    "name" VARCHAR,
-    "description" VARCHAR,
+    "created_at" TIMESTAMP(6),
+
+    CONSTRAINT "equivalency_group_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE IF NOT EXISTS "discipline" (
+    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "code" TEXT,
+    "name" TEXT,
+    "description" TEXT,
     "department_id" UUID,
     "created_at" TIMESTAMP(6),
+    "equivalency_group_id" UUID,
 
     CONSTRAINT "discipline_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
-CREATE TABLE "discipline_class" (
+CREATE TABLE IF NOT EXISTS "completed_discipline" (
+    "userId" TEXT NOT NULL,
+    "disciplineId" UUID NOT NULL,
+
+    CONSTRAINT "completed_discipline_pkey" PRIMARY KEY ("userId","disciplineId")
+);
+
+-- CreateTable
+CREATE TABLE IF NOT EXISTS "discipline_class" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
-    "class_number" VARCHAR,
+    "class_number" TEXT,
     "discipline_id" UUID,
-    "semester" VARCHAR,
-    "professor" VARCHAR,
+    "semester" TEXT,
+    "professor" TEXT,
     "created_at" TIMESTAMP(6),
 
     CONSTRAINT "discipline_class_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
-CREATE TABLE "discipline_class_schedule" (
+CREATE TABLE IF NOT EXISTS "discipline_class_schedule" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
     "discipline_class_id" UUID,
-    "day_of_week" VARCHAR,
+    "day_of_week" TEXT,
     "start_time" TIME(6),
     "end_time" TIME(6),
-    "class_type" VARCHAR,
+    "class_type" TEXT,
     "created_at" TIMESTAMP(6),
 
     CONSTRAINT "discipline_class_schedule_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
-CREATE TABLE "discipline_course" (
+CREATE TABLE IF NOT EXISTS "discipline_course" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
     "discipline_id" UUID,
     "course_id" UUID,
@@ -71,7 +88,7 @@ CREATE TABLE "discipline_course" (
 );
 
 -- CreateTable
-CREATE TABLE "prerequisite" (
+CREATE TABLE IF NOT EXISTS "prerequisite" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
     "discipline_course_id" UUID,
     "prerequisite_discipline_id" UUID,
@@ -81,8 +98,7 @@ CREATE TABLE "prerequisite" (
 );
 
 -- CreateTable
-CREATE TABLE "Account" (
-    "id" TEXT NOT NULL,
+CREATE TABLE IF NOT EXISTS "account" (
     "userId" TEXT NOT NULL,
     "type" TEXT NOT NULL,
     "provider" TEXT NOT NULL,
@@ -94,55 +110,63 @@ CREATE TABLE "Account" (
     "scope" TEXT,
     "id_token" TEXT,
     "session_state" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT "Account_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "account_pkey" PRIMARY KEY ("provider","providerAccountId")
 );
 
 -- CreateTable
-CREATE TABLE "Session" (
-    "id" TEXT NOT NULL,
+CREATE TABLE IF NOT EXISTS "session" (
     "sessionToken" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
     "expires" TIMESTAMP(3) NOT NULL,
-
-    CONSTRAINT "Session_pkey" PRIMARY KEY ("id")
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL
 );
 
 -- CreateTable
-CREATE TABLE "User" (
+CREATE TABLE IF NOT EXISTS "user" (
     "id" TEXT NOT NULL,
     "name" TEXT,
-    "email" TEXT,
+    "email" TEXT NOT NULL,
     "emailVerified" TIMESTAMP(3),
     "image" TEXT,
+    "courseId" UUID,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "user_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
-CREATE TABLE "VerificationToken" (
+CREATE TABLE IF NOT EXISTS "verification_token" (
     "identifier" TEXT NOT NULL,
     "token" TEXT NOT NULL,
-    "expires" TIMESTAMP(3) NOT NULL
+    "expires" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "verification_token_pkey" PRIMARY KEY ("identifier","token")
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Account_provider_providerAccountId_key" ON "Account"("provider", "providerAccountId");
+CREATE UNIQUE INDEX "session_sessionToken_key" ON "session"("sessionToken");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Session_sessionToken_key" ON "Session"("sessionToken");
+CREATE UNIQUE INDEX "user_email_key" ON "user"("email");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
-
--- CreateIndex
-CREATE UNIQUE INDEX "VerificationToken_token_key" ON "VerificationToken"("token");
-
--- CreateIndex
-CREATE UNIQUE INDEX "VerificationToken_identifier_token_key" ON "VerificationToken"("identifier", "token");
+CREATE UNIQUE INDEX "verification_token_token_key" ON "verification_token"("token");
 
 -- AddForeignKey
 ALTER TABLE "discipline" ADD CONSTRAINT "discipline_department_id_fkey" FOREIGN KEY ("department_id") REFERENCES "department"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE "discipline" ADD CONSTRAINT "discipline_equivalency_group_id_fkey" FOREIGN KEY ("equivalency_group_id") REFERENCES "equivalency_group"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "completed_discipline" ADD CONSTRAINT "completed_discipline_userId_fkey" FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "completed_discipline" ADD CONSTRAINT "completed_discipline_disciplineId_fkey" FOREIGN KEY ("disciplineId") REFERENCES "discipline"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "discipline_class" ADD CONSTRAINT "discipline_class_discipline_id_fkey" FOREIGN KEY ("discipline_id") REFERENCES "discipline"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -163,7 +187,10 @@ ALTER TABLE "prerequisite" ADD CONSTRAINT "prerequisite_discipline_course_id_fke
 ALTER TABLE "prerequisite" ADD CONSTRAINT "prerequisite_prerequisite_discipline_id_fkey" FOREIGN KEY ("prerequisite_discipline_id") REFERENCES "discipline"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE "Account" ADD CONSTRAINT "Account_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "account" ADD CONSTRAINT "account_userId_fkey" FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Session" ADD CONSTRAINT "Session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "session" ADD CONSTRAINT "session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "user" ADD CONSTRAINT "user_courseId_fkey" FOREIGN KEY ("courseId") REFERENCES "course"("id") ON DELETE SET NULL ON UPDATE CASCADE;
