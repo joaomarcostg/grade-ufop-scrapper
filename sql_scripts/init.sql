@@ -120,6 +120,26 @@ CREATE TABLE IF NOT EXISTS "session" (
     FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS "schedule" (
+    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    "userId" TEXT NOT NULL,
+    "semester" TEXT NOT NULL,
+    "name" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS "schedule_class" (
+    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    "scheduleId" UUID NOT NULL,
+    "disciplineClassId" UUID NOT NULL,
+
+    FOREIGN KEY ("disciplineClassId") REFERENCES "discipline_class"("id") ON DELETE NO ACTION ON UPDATE NO ACTION,
+    FOREIGN KEY ("scheduleId") REFERENCES "schedule"("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
 CREATE TABLE IF NOT EXISTS "verification_token" (
     "identifier" TEXT NOT NULL,
     "token" TEXT NOT NULL,
