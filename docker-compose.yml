@@ -5,18 +5,31 @@ services:
       context: .
       dockerfile: Dockerfile.scraper
     depends_on:
-      - db
+      - ${DB_SERVICE:-db}  # Use 'db' by default if DB_SERVICE is not defined
 
   db:
     image: postgres
-    # platform: linux/arm64 uncomment this line to run in macOS
     restart: always
     environment:
-      POSTGRES_DB: gradeufop_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: ${POSTGRES_DB:-gradeufop_db}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-12345678}
     ports:
       - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./sql_scripts:/docker-entrypoint-initdb.d
+
+  db-prod:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${PROD_POSTGRES_DB}
+      POSTGRES_USER: ${PROD_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${PROD_POSTGRES_PASSWORD}
+      POSTGRES_HOST: ${PROD_POSTGRES_HOST}
+    ports:
+      - "5433:5433"
     volumes:
       - db-data:/var/lib/postgresql/data
       - ./sql_scripts:/docker-entrypoint-initdb.d
